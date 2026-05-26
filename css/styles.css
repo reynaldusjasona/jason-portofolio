@@ -581,6 +581,27 @@ p { color: var(--text-mid); line-height: 1.8; }
 .project-btn--live { color: var(--red); background: var(--red-light); border-color: rgba(184,50,40,.15); }
 .project-btn--live:hover { background: var(--red); color: #fff; }
 
+.project-status--ongoing {
+  font-size: .63rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #92650a;
+  background: #fef3c7;
+  padding: 3px 9px;
+  border-radius: var(--r-full);
+  border: 1px solid rgba(160,110,0,.2);
+}
+
+.project-coming-soon {
+  font-size: .78rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  font-style: italic;
+  display: inline-flex;
+  align-items: center;
+}
+
 /* Early builds */
 .early-builds {
   background: var(--bg-alt);
