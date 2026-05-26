@@ -1,923 +1,480 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Jason Agnus Dei — Computer Science Student | FinTech, AI, Cybersecurity & Big Data Enthusiast"
-    />
-    <title>Jason Agnus Dei Liemanta | Portfolio</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jason Agnus Dei Liemanta — CS student specialising in AI and Cybersecurity at the University of Wollongong / SIM Global Education Singapore." />
+  <title>Jason Agnus Dei Liemanta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
 
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">JADL</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <a href="#about">About</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
+  <main>
 
-  <body>
-    <!-- ============================================================
-         NAVIGATION
-    ============================================================ -->
-    <nav class="navbar" id="navbar">
-      <div class="nav-container">
-        <a href="#hero" class="nav-logo">RJA</a>
+    <!-- ===================================================
+         HERO
+    =================================================== -->
+    <section class="hero" id="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-layout">
 
-        <!-- Desktop nav links -->
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#leadership">Leadership</a></li>
-          <li><a href="#learning">Learning</a></li>
-          <li><a href="#contact" class="nav-cta">Contact</a></li>
-        </ul>
+        <div class="hero-text">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            Open to Internship Opportunities
+          </div>
 
-        <!-- Mobile hamburger -->
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+          <h1 class="hero-name">
+            <span class="hero-name-line">Jason</span>
+            <span class="hero-name-line hero-name-italic">Agnus Dei</span>
+            <span class="hero-name-line">Liemanta</span>
+          </h1>
+
+          <p class="hero-tagline">CS student building toward AI &amp; Cybersecurity — with the operational depth and cross-cultural judgment most tech candidates don't have yet.</p>
+
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="assets/Jason_Agnus_Dei_CV.pdf" class="btn btn-secondary" target="_blank" rel="noopener">Download CV</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-number">3.6</span>
+              <span class="stat-label">GPA / 4.0</span>
+            </div>
+            <div class="stat-div"></div>
+            <div class="stat">
+              <span class="stat-number">7.0</span>
+              <span class="stat-label">IELTS</span>
+            </div>
+            <div class="stat-div"></div>
+            <div class="stat">
+              <span class="stat-number">7</span>
+              <span class="stat-label">Certifications</span>
+            </div>
+            <div class="stat-div"></div>
+            <div class="stat">
+              <span class="stat-number">300+</span>
+              <span class="stat-label">Event Participants</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-photo-wrap">
+          <img src="public/Photo.PNG" alt="Jason Agnus Dei Liemanta" class="hero-photo" />
+        </div>
+
       </div>
 
-      <!-- Mobile menu -->
-      <div class="mobile-menu" id="mobile-menu">
-        <ul>
-          <li><a href="#about" class="mobile-link">About</a></li>
-          <li><a href="#skills" class="mobile-link">Skills</a></li>
-          <li><a href="#projects" class="mobile-link">Projects</a></li>
-          <li><a href="#experience" class="mobile-link">Experience</a></li>
-          <li><a href="#leadership" class="mobile-link">Leadership</a></li>
-          <li><a href="#learning" class="mobile-link">Learning</a></li>
-          <li><a href="#contact" class="mobile-link">Contact</a></li>
-        </ul>
+      <a href="#about" class="scroll-cue" aria-label="Scroll to About">
+        <div class="scroll-arrow"></div>
+      </a>
+    </section>
+
+    <!-- ===================================================
+         ABOUT
+    =================================================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about-layout">
+
+          <div class="about-left anim-right">
+            <div class="eyebrow">About</div>
+            <h2 class="section-title">Tech skills meet<br /><em>real-world judgment.</em></h2>
+            <p class="about-lead">I'm a Computer Science student (Big Data &amp; Cybersecurity) at the University of Wollongong via SIM Global Education Singapore — GPA 3.6, graduating October 2026.</p>
+            <p class="about-body">What makes my background unusual for a CS student is the combination: I interned at the Indonesian Embassy in Singapore, supervised the Indonesian general election overseas for BAWASLU, directed logistics for a 300+ person orientation program, and led PR for a charity that raised SGD 30,000 for Indonesian domestic workers. That's technical study plus diplomacy context plus operational accountability — and it's not a common profile.</p>
+            <p class="about-body">I'm building toward roles in AI and Cybersecurity. I hold ISC2 Candidate membership and completed six Google AI certifications in May 2026.</p>
+            <div class="about-meta">
+              <div class="meta-item"><span class="meta-icon">📍</span><span>Singapore</span></div>
+              <div class="meta-item"><span class="meta-icon">🎓</span><span>University of Wollongong / SIM Global Education</span></div>
+              <div class="meta-item"><span class="meta-icon">🗓</span><span>Expected graduation: October 2026</span></div>
+              <div class="meta-item">
+                <span class="meta-icon">📄</span>
+                <a href="assets/Jason_Agnus_Dei_CV.pdf" class="inline-link" target="_blank" rel="noopener">Download CV / Resume</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-right anim-left">
+            <div class="about-card">
+              <div class="about-card-label">Career Focus</div>
+              <div class="focus-list">
+                <div class="focus-item">
+                  <span class="focus-icon">🤖</span>
+                  <div>
+                    <strong>Artificial Intelligence</strong>
+                    <p>Applying intelligent systems to real data-driven challenges. Six Google AI credentials earned in 2026.</p>
+                  </div>
+                </div>
+                <div class="focus-item">
+                  <span class="focus-icon">🔒</span>
+                  <div>
+                    <strong>Cybersecurity</strong>
+                    <p>Protecting digital infrastructure. ISC2 Candidate — studying adversarial security at the systems level.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-card">
+              <div class="about-card-label">Tools &amp; Software</div>
+              <div class="tools-grid">
+                <span class="tool-tag">VS Code</span>
+                <span class="tool-tag">Google Colab</span>
+                <span class="tool-tag">Xcode</span>
+                <span class="tool-tag">Canva</span>
+                <span class="tool-tag">Filmora</span>
+                <span class="tool-tag">Adobe Premiere Pro</span>
+                <span class="tool-tag">Microsoft Excel</span>
+                <span class="tool-tag">Google Sheets</span>
+              </div>
+            </div>
+
+            <div class="about-card">
+              <div class="about-card-label">Languages</div>
+              <div class="lang-list">
+                <div class="lang-item">
+                  <span class="lang-name">Indonesian</span>
+                  <span class="lang-badge">Native</span>
+                </div>
+                <div class="lang-item">
+                  <span class="lang-name">English</span>
+                  <span class="lang-badge">IELTS 7.0</span>
+                </div>
+                <div class="lang-item">
+                  <span class="lang-name">Chinese &amp; Italian</span>
+                  <span class="lang-badge lang-badge--learning">Learning</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
-    </nav>
+    </section>
 
-    <main>
-      <!-- ============================================================
-           HERO SECTION
-      ============================================================ -->
-      <section class="hero" id="hero">
-        <div class="hero-bg-shape"></div>
-        <div class="container hero-container">
-          <div class="hero-text">
-            <!-- Status badge -->
-            <div class="hero-badge">
-              <span class="badge-dot"></span>
-              Open to Internship Opportunities
-            </div>
-
-            <h1 class="hero-name">
-              Hi, I'm <span class="highlight">Jason Agnus Dei Liemanta</span>
-            </h1>
-
-            <p class="hero-title">
-              Computer Science Student | FinTech, Cybersecurity,<br />
-              Big Data &amp; AI Enthusiast
-            </p>
-
-            <p class="hero-description">
-              Computer Science student building toward the future of FinTech, AI
-              &amp; Secure Digital Systems. I combine technical depth with real-world
-              experience in diplomacy, student leadership, and operational management
-              — driven by curiosity and a commitment to meaningful work.
-            </p>
-
-            <div class="hero-cta">
-              <a href="#projects" class="btn btn-primary">View My Projects</a>
-              <a href="#contact" class="btn btn-secondary">Contact Me</a>
-            </div>
-
-            <!-- Quick stats -->
-            <div class="hero-stats">
-              <div class="stat">
-                <span class="stat-number">3+</span>
-                <span class="stat-label">Years Studying CS</span>
-              </div>
-              <div class="stat-divider"></div>
-              <div class="stat">
-                <span class="stat-number">5+</span>
-                <span class="stat-label">Projects Built</span>
-              </div>
-              <div class="stat-divider"></div>
-              <div class="stat">
-                <span class="stat-number">2+</span>
-                <span class="stat-label">Real-World Roles</span>
-              </div>
-            </div>
+    <!-- ===================================================
+         CERTIFICATIONS — full-bleed navy band
+    =================================================== -->
+    <section class="certs-band" id="certifications">
+      <div class="certs-inner">
+        <div class="certs-header anim-up">
+          <div class="eyebrow eyebrow--light">Certifications</div>
+          <h2 class="certs-title">7 credentials,<br />earned in 2026.</h2>
+        </div>
+        <div class="certs-track">
+          <div class="cert-card anim-scale delay-1">
+            <div class="cert-issuer">Google Career Certificates</div>
+            <div class="cert-name">Google AI Professional Certificate</div>
+            <div class="cert-date">May 17, 2026</div>
           </div>
-
-          <!-- Hero visual / avatar placeholder -->
-          <div class="hero-visual">
-            <div class="hero-avatar">
-              <!-- REPLACE: Add your photo here.
-                   Put your image file in assets/images/photo.jpg
-                   Then replace the div below with:
-                   <img src="assets/images/photo.jpg" alt="Jason Agnus Dei" />
-              -->
-              <div class="avatar-placeholder">
-                <span>JAD</span>
-              </div>
-            </div>
-            <!-- Floating accent cards -->
-            <div class="float-card float-card--top">
-              <span class="float-icon">&#128272;</span>
-              <span>Cybersecurity</span>
-            </div>
-            <div class="float-card float-card--bottom">
-              <span class="float-icon">&#129302;</span>
-              <span>AI &amp; Big Data</span>
-            </div>
+          <div class="cert-card anim-scale delay-2">
+            <div class="cert-issuer">Google Career Certificates</div>
+            <div class="cert-name">Google AI Essentials</div>
+            <div class="cert-date">May 18, 2026</div>
+          </div>
+          <div class="cert-card anim-scale delay-3">
+            <div class="cert-issuer">Google Career Certificates</div>
+            <div class="cert-name">AI Fundamentals</div>
+            <div class="cert-date">May 16, 2026</div>
+          </div>
+          <div class="cert-card anim-scale delay-4">
+            <div class="cert-issuer">Google Career Certificates</div>
+            <div class="cert-name">AI for Research and Insights</div>
+            <div class="cert-date">May 17, 2026</div>
+          </div>
+          <div class="cert-card anim-scale delay-5">
+            <div class="cert-issuer">Google Career Certificates</div>
+            <div class="cert-name">AI for Writing and Communicating</div>
+            <div class="cert-date">May 17, 2026</div>
+          </div>
+          <div class="cert-card anim-scale delay-6">
+            <div class="cert-issuer">Google Career Certificates</div>
+            <div class="cert-name">Google Prompting Essentials</div>
+            <div class="cert-date">May 21, 2026</div>
+          </div>
+          <div class="cert-card cert-card--isc2 anim-scale delay-7">
+            <div class="cert-issuer">ISC2</div>
+            <div class="cert-name">ISC2 Candidate</div>
+            <div class="cert-date">Expires May 31, 2027</div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Scroll indicator -->
-        <a href="#about" class="scroll-indicator" aria-label="Scroll down">
-          <div class="scroll-arrow"></div>
-        </a>
-      </section>
+    <!-- ===================================================
+         PROJECTS
+    =================================================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="eyebrow anim-up">Projects</div>
+        <h2 class="section-title anim-up delay-1">What I've built.</h2>
+        <p class="section-sub anim-up delay-2">Real work, real output. The agency website is the main piece — the Python projects are early experiments kept for transparency.</p>
 
-      <!-- ============================================================
-           ABOUT ME SECTION
-      ============================================================ -->
-      <section class="section" id="about">
-        <div class="container">
-          <div class="section-label">About Me</div>
-          <h2 class="section-title">More Than Just a <span class="highlight">Developer</span></h2>
-
-          <div class="about-grid">
-            <div class="about-text">
-              <p>
-                I'm a Computer Science student with a strong passion for technology that
-                solves real financial and societal problems. My focus spans
-                <strong>FinTech, Artificial Intelligence, Big Data, and Cybersecurity</strong>
-                — areas I believe will define the next decade.
-              </p>
-              <p>
-                What sets me apart is that I don't just write code — I understand the
-                world it operates in. My experience at the
-                <strong>Indonesian Embassy in Singapore</strong> gave me a front-row seat
-                to diplomacy, cross-cultural communication, and high-stakes operations.
-                I've also led and coordinated events and elections at the student level,
-                which sharpened my organizational and leadership instincts.
-              </p>
-              <p>
-                I'm someone who moves with intention: I value craftsmanship, clarity,
-                and continuous growth. Whether it's a data pipeline, a security audit,
-                or a team project — I bring the same level of care and professionalism.
-              </p>
-
-              <!-- Personal details -->
-              <div class="about-details">
-                <div class="detail-item">
-                  <span class="detail-icon">&#127891;</span>
-                  <span>
-                    <!-- REPLACE: Your university name -->
-                    B.Sc. Computer Science, University of Wollongong
-                  </span>
-                </div>
-                <div class="detail-item">
-                  <span class="detail-icon">&#128205;</span>
-                  <span>Singapore</span>
-                </div>
-                <div class="detail-item">
-                  <span class="detail-icon">&#128337;</span>
-                  <!-- REPLACE: Your expected graduation year -->
-                  <span>Expected Graduation: 2026</span>
-                </div>
-                <div class="detail-item">
-                  <span class="detail-icon">&#128220;</span>
-                  <span>
-                    <a href="assets/Jason_Agnus_Dei_CV.pdf" class="inline-link" target="_blank" rel="noopener">
-                      Download CV / Resume
-                    </a>
-                    <!-- REPLACE: Add your CV PDF to assets/ folder and update the link above -->
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <!-- About sidebar: interest cards -->
-            <div class="about-sidebar">
-              <div class="interest-card">
-                <div class="interest-icon">&#128200;</div>
-                <h4>FinTech</h4>
-                <p>Building smarter, faster, and more inclusive financial systems through technology.</p>
-              </div>
-              <div class="interest-card">
-                <div class="interest-icon">&#129504;</div>
-                <h4>AI &amp; Machine Learning</h4>
-                <p>Applying intelligent systems to solve complex, data-driven challenges.</p>
-              </div>
-              <div class="interest-card">
-                <div class="interest-icon">&#128274;</div>
-                <h4>Cybersecurity</h4>
-                <p>Protecting digital infrastructure and understanding the adversarial landscape.</p>
-              </div>
-              <div class="interest-card">
-                <div class="interest-icon">&#128202;</div>
-                <h4>Big Data</h4>
-                <p>Extracting insight and value from large-scale, complex datasets.</p>
-              </div>
-            </div>
+        <!-- Featured -->
+        <div class="project-featured anim-up delay-2">
+          <div class="project-meta-row">
+            <span class="project-domain">Web Development</span>
+            <span class="project-num">01</span>
           </div>
-        </div>
-      </section>
-
-      <!-- ============================================================
-           SKILLS SECTION
-      ============================================================ -->
-      <section class="section section--alt" id="skills">
-        <div class="container">
-          <div class="section-label">What I Know</div>
-          <h2 class="section-title">Technical <span class="highlight">Skills</span></h2>
-          <p class="section-subtitle">
-            A snapshot of the tools, languages, and domains I work with.
-          </p>
-
-          <div class="skills-grid">
-
-            <div class="skill-category">
-              <div class="skill-category-header">
-                <span class="skill-cat-icon">&#128187;</span>
-                <h3>Programming Languages</h3>
-              </div>
-              <div class="skill-tags">
-                <!-- REPLACE / ADD: Your actual languages -->
-                <span class="tag">Python</span>
-                <span class="tag">Java</span>
-                <span class="tag">C++</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">SQL</span>
-                <span class="tag tag--learning">Go (learning)</span>
-              </div>
-            </div>
-
-            <div class="skill-category">
-              <div class="skill-category-header">
-                <span class="skill-cat-icon">&#128218;</span>
-                <h3>Frameworks &amp; Libraries</h3>
-              </div>
-              <div class="skill-tags">
-                <!-- REPLACE / ADD: Your actual frameworks -->
-                <span class="tag">React</span>
-                <span class="tag">Node.js</span>
-                <span class="tag">Flask</span>
-                <span class="tag">Pandas</span>
-                <span class="tag">NumPy</span>
-                <span class="tag tag--learning">TensorFlow (learning)</span>
-              </div>
-            </div>
-
-            <div class="skill-category">
-              <div class="skill-category-header">
-                <span class="skill-cat-icon">&#128736;</span>
-                <h3>Tools &amp; Platforms</h3>
-              </div>
-              <div class="skill-tags">
-                <!-- REPLACE / ADD: Your actual tools -->
-                <span class="tag">Git &amp; GitHub</span>
-                <span class="tag">MySQL</span>
-                <span class="tag">Cursor</span>
-                <span class="tag">Claude</span>
-                <span class="tag">VS Code</span>
-                <span class="tag tag--learning">Docker (learning)</span>
-              </div>
-            </div>
-
-            <div class="skill-category">
-              <div class="skill-category-header">
-                <span class="skill-cat-icon">&#128202;</span>
-                <h3>Data &amp; Analytics</h3>
-              </div>
-              <div class="skill-tags">
-                <!-- REPLACE / ADD: Your actual data skills -->
-                <span class="tag">Data Analysis</span>
-                <span class="tag">Data Visualization</span>
-                <span class="tag">Jupyter Notebook</span>
-                <span class="tag">Matplotlib</span>
-                <span class="tag">Excel / Sheets</span>
-              </div>
-            </div>
-
-            <div class="skill-category">
-              <div class="skill-category-header">
-                <span class="skill-cat-icon">&#128274;</span>
-                <h3>Cybersecurity</h3>
-              </div>
-              <div class="skill-tags">
-                <!-- REPLACE / ADD: Your actual security knowledge -->
-                <span class="tag">Network Security Fundamentals</span>
-                <span class="tag">OWASP Top 10</span>
-                <span class="tag">Linux Hardening</span>
-                <span class="tag tag--learning">Penetration Testing (learning)</span>
-              </div>
-            </div>
-
-            <div class="skill-category">
-              <div class="skill-category-header">
-                <span class="skill-cat-icon">&#129309;</span>
-                <h3>Soft Skills</h3>
-              </div>
-              <div class="skill-tags">
-                <span class="tag">Cross-Cultural Communication</span>
-                <span class="tag">Event Coordination</span>
-                <span class="tag">Team Leadership</span>
-                <span class="tag">Problem Solving</span>
-                <span class="tag">Adaptability</span>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================================
-           FEATURED PROJECTS SECTION
-      ============================================================ -->
-      <section class="section" id="projects">
-        <div class="container">
-          <div class="section-label">What I've Built</div>
-          <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
-          <p class="section-subtitle">
-            A selection of projects that reflect my interests and technical growth.
-            <!-- REPLACE: Update descriptions as you complete real projects -->
-          </p>
-
-          <div class="projects-grid">
-
-            <!-- PROJECT 1 — REPLACE WITH YOUR REAL PROJECT -->
-            <div class="project-card project-card--featured">
-              <div class="project-card-header">
-                <div class="project-number">01</div>
-                <div class="project-links">
-                  <!-- REPLACE: Add your GitHub and live demo links -->
-                  <a href="#" class="project-link" aria-label="GitHub" target="_blank" rel="noopener">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
-                    </svg>
-                  </a>
-                  <a href="#" class="project-link" aria-label="Live demo" target="_blank" rel="noopener">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                      <polyline points="15 3 21 3 21 9"/>
-                      <line x1="10" y1="14" x2="21" y2="3"/>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="project-body">
-                <span class="project-domain">FinTech &amp; Data</span>
-                <!-- REPLACE: Project title and description -->
-                <h3 class="project-title">Personal Finance Dashboard</h3>
-                <p class="project-description">
-                  A web-based dashboard for tracking personal income, expenses, and savings goals.
-                  Built with Python (Flask) and Chart.js, with a PostgreSQL backend.
-                  <!-- REPLACE: Replace with your actual project description -->
-                </p>
-                <div class="project-tags">
-                  <span class="tag tag--small">Python</span>
-                  <span class="tag tag--small">Flask</span>
-                  <span class="tag tag--small">PostgreSQL</span>
-                  <span class="tag tag--small">Chart.js</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- PROJECT 2 — REPLACE WITH YOUR REAL PROJECT -->
-            <div class="project-card">
-              <div class="project-card-header">
-                <div class="project-number">02</div>
-                <div class="project-links">
-                  <a href="#" class="project-link" aria-label="GitHub" target="_blank" rel="noopener">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
-                    </svg>
-                  </a>
-                  <a href="#" class="project-link" aria-label="Live demo" target="_blank" rel="noopener">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                      <polyline points="15 3 21 3 21 9"/>
-                      <line x1="10" y1="14" x2="21" y2="3"/>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="project-body">
-                <span class="project-domain">Cybersecurity</span>
-                <!-- REPLACE: Project title and description -->
-                <h3 class="project-title">Network Vulnerability Scanner</h3>
-                <p class="project-description">
-                  A lightweight CLI tool to scan local networks for open ports and common
-                  vulnerabilities. Built as a learning project to understand network security fundamentals.
-                  <!-- REPLACE: Replace with your actual project description -->
-                </p>
-                <div class="project-tags">
-                  <span class="tag tag--small">Python</span>
-                  <span class="tag tag--small">Networking</span>
-                  <span class="tag tag--small">Linux</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- PROJECT 3 — REPLACE WITH YOUR REAL PROJECT -->
-            <div class="project-card">
-              <div class="project-card-header">
-                <div class="project-number">03</div>
-                <div class="project-links">
-                  <a href="#" class="project-link" aria-label="GitHub" target="_blank" rel="noopener">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
-                    </svg>
-                  </a>
-                  <a href="#" class="project-link" aria-label="Live demo" target="_blank" rel="noopener">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                      <polyline points="15 3 21 3 21 9"/>
-                      <line x1="10" y1="14" x2="21" y2="3"/>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="project-body">
-                <span class="project-domain">AI &amp; Big Data</span>
-                <!-- REPLACE: Project title and description -->
-                <h3 class="project-title">Sentiment Analysis on Financial News</h3>
-                <p class="project-description">
-                  An NLP pipeline that scrapes financial news headlines and classifies market
-                  sentiment using a pre-trained transformer model. Outputs trend charts for
-                  selected stocks.
-                  <!-- REPLACE: Replace with your actual project description -->
-                </p>
-                <div class="project-tags">
-                  <span class="tag tag--small">Python</span>
-                  <span class="tag tag--small">NLP</span>
-                  <span class="tag tag--small">Transformers</span>
-                  <span class="tag tag--small">Pandas</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- PROJECT 4 — REPLACE WITH YOUR REAL PROJECT -->
-            <div class="project-card">
-              <div class="project-card-header">
-                <div class="project-number">04</div>
-                <div class="project-links">
-                  <a href="#" class="project-link" aria-label="GitHub" target="_blank" rel="noopener">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
-                    </svg>
-                  </a>
-                  <a href="#" class="project-link" aria-label="Live demo" target="_blank" rel="noopener">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                      <polyline points="15 3 21 3 21 9"/>
-                      <line x1="10" y1="14" x2="21" y2="3"/>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="project-body">
-                <span class="project-domain">Software Engineering</span>
-                <!-- REPLACE: Project title and description -->
-                <h3 class="project-title">Student Event Management System</h3>
-                <p class="project-description">
-                  A full-stack web application for managing student club events, RSVPs, and
-                  logistics. Inspired by real-world event coordination experience in student
-                  organizations.
-                  <!-- REPLACE: Replace with your actual project description -->
-                </p>
-                <div class="project-tags">
-                  <span class="tag tag--small">JavaScript</span>
-                  <span class="tag tag--small">Node.js</span>
-                  <span class="tag tag--small">MySQL</span>
-                  <span class="tag tag--small">React</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- GitHub CTA -->
-          <div class="projects-cta">
-            <p>More projects on my GitHub</p>
-            <!-- REPLACE: Add your GitHub username -->
-            <a href="https://github.com/reynaldusjasona" class="btn btn-outline" target="_blank" rel="noopener">
-              View All on GitHub
+          <h3 class="project-title">Professional Marketing Agency Website</h3>
+          <p class="project-desc">A complete static website designed and built for a real marketing agency. Includes full page layout, services sections, team presentation, and contact functionality — delivered as a production-ready site.</p>
+          <div class="project-actions">
+            <!--
+              Replace the # hrefs below with your GitHub repo URL and live site URL before deploying.
+              Example: href="https://github.com/reynaldusjasona/agency-website"
+            -->
+            <a href="#" class="project-btn" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <a href="#" class="project-btn project-btn--live" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Live Site
             </a>
           </div>
         </div>
-      </section>
 
-      <!-- ============================================================
-           EXPERIENCE SECTION
-      ============================================================ -->
-      <section class="section section--alt" id="experience">
-        <div class="container">
-          <div class="section-label">Where I've Been</div>
-          <h2 class="section-title">Professional <span class="highlight">Experience</span></h2>
-
-          <div class="timeline">
-
-            <!-- EXPERIENCE 1 -->
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <div class="timeline-header">
-                  <div>
-                    <h3 class="timeline-role">Social &amp; Cultural Intern</h3>
-                    <p class="timeline-org">Embassy of the Republic of Indonesia, Singapore</p>
-                  </div>
-                  <!-- REPLACE: Correct dates -->
-                  <span class="timeline-date">January 2026 – April 2026</span>
-                </div>
-                <ul class="timeline-bullets">
-                  <!--
-                    REPLACE: Use strong action verbs. Examples below — replace with your real tasks.
-                    Keep each bullet to 1–2 lines. Focus on impact and numbers where possible.
-                  -->
-                  <li>Supported the Social &amp; Cultural division in coordinating diplomatic events, cultural programs, and community outreach initiatives for the Indonesian diaspora in Singapore.</li>
-                  <li>Assisted in drafting correspondence, preparing event briefs, and coordinating logistics for official and public-facing embassy programs.</li>
-                  <li>Gained exposure to cross-cultural diplomacy, government communication protocols, and stakeholder management in a high-profile international environment.</li>
-                </ul>
-                <div class="timeline-tags">
-                  <span class="tag tag--small">Diplomacy</span>
-                  <span class="tag tag--small">Event Coordination</span>
-                  <span class="tag tag--small">Cross-Cultural Communication</span>
-                  <span class="tag tag--small">Documentation</span>
-                </div>
-              </div>
+        <!-- Early builds -->
+        <div class="early-builds anim-up delay-3">
+          <div class="early-label">Early Builds — Python</div>
+          <div class="early-row">
+            <div class="early-card">
+              <span class="early-icon">🐍</span>
+              <span>Snake Game</span>
             </div>
-
-            <!-- EXPERIENCE 2 — REPLACE WITH YOUR REAL ROLE -->
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <div class="timeline-header">
-                  <div>
-                    <!-- REPLACE: Your actual role title -->
-                    <h3 class="timeline-role">Election Operations &amp; Supervision</h3>
-                    <!-- REPLACE: Organization name -->
-                    <p class="timeline-org">Badan Pengawas Pemilu / Panitia Pengawas Pemilu</p>
-                  </div>
-                  <!-- REPLACE: Correct dates -->
-                  <span class="timeline-date">January 2024</span>
-                </div>
-                <ul class="timeline-bullets">
-                  <!--
-                    REPLACE: Replace with your actual responsibilities.
-                  -->
-                  <li>Oversaw the end-to-end operational planning and supervision of [organization name]'s student election process, ensuring transparency, fairness, and procedural compliance.</li>
-                  <li>Coordinated between candidate representatives, election committee members, and the student body to manage logistics, communications, and voting procedures.</li>
-                  <li>Produced post-election reports summarizing outcomes, participation rates, and procedural observations for the governing board.</li>
-                </ul>
-                <div class="timeline-tags">
-                  <span class="tag tag--small">Operations Management</span>
-                  <span class="tag tag--small">Governance</span>
-                  <span class="tag tag--small">Stakeholder Coordination</span>
-                </div>
-              </div>
+            <div class="early-card">
+              <span class="early-icon">🔢</span>
+              <span>Calculator</span>
             </div>
-
+            <div class="early-card">
+              <span class="early-icon">✊</span>
+              <span>Rock-Paper-Scissors</span>
+            </div>
           </div>
+          <p class="early-note">Beginner Python scripts — shown for honesty, not as portfolio centrepieces.</p>
         </div>
-      </section>
 
-      <!-- ============================================================
-           LEADERSHIP & ACTIVITIES SECTION
-      ============================================================ -->
-      <section class="section" id="leadership">
-        <div class="container">
-          <div class="section-label">Beyond the Classroom</div>
-          <h2 class="section-title">Leadership &amp; <span class="highlight">Activities</span></h2>
-          <p class="section-subtitle">
-            I believe great engineers are also great collaborators. Here's where I've led, contributed, and grown.
-          </p>
-
-          <div class="leadership-grid">
-
-            <!-- ACTIVITY 1 — REPLACE WITH YOUR REAL ACTIVITY -->
-            <div class="leadership-card">
-              <div class="leadership-icon">&#127775;</div>
-              <div class="leadership-body">
-                <div class="leadership-header">
-                  <!-- REPLACE: Your role and organization -->
-                  <h3>Public Relation Subcommittee</h3>
-                  <span class="leadership-org"> PPIS &bull; [2024-2025]</span>
-                </div>
-                <p>
-                  <!-- REPLACE: 2–3 sentences about your contribution and impact -->
-                  Supported community and charity initiatives under PPIS, including Peduli Kartini, which raised <strong>SGD 30,000+</strong> for Indonesian women domestic workers in Singapore. 
-                  Also contributed to a 3-week outreach program for underprivileged children while coordinating with stakeholders for smooth execution.
-                </p>
-              </div>
-            </div>
-
-            <!-- ACTIVITY 2 — REPLACE WITH YOUR REAL ACTIVITY -->
-            <div class="leadership-card">
-              <div class="leadership-icon">&#127942;</div>
-              <div class="leadership-body">
-                <div class="leadership-header">
-                  <h3>Student Ambassador</h3>
-                  <span class="leadership-org"> SIM Global Education &bull; [2024-2026]</span>
-                </div>
-                <p>
-                  <!-- REPLACE: 2–3 sentences about your contribution and impact -->
-                  Supported major campus activities including <strong>graduation</strong> and <strong>open house</strong>, while also contributing to volunteer initiatives such as <strong>river clean-up programs</strong>. 
-                  Assisted with <strong>campus tours</strong> by welcoming and guiding prospective students, helping create a positive and engaging introduction to university life.
-                </p>
-              </div>
-            </div>
-
-            <!-- ACTIVITY 3 — REPLACE WITH YOUR REAL ACTIVITY -->
-            <div class="leadership-card">
-              <div class="leadership-icon">&#128101;</div>
-              <div class="leadership-body">
-                <div class="leadership-header">
-                  <h3>Logistic Director</h3>
-                  <span class="leadership-org"> Kembang KemPPIS &bull; [2025]</span>
-                </div>
-                <p>
-                  <!-- REPLACE: 2–3 sentences about your contribution and impact -->
-                  Led logistics for a <strong>300+</strong> participant orientation program with a budget of <strong>SGD 5,000+</strong>.
-                  Managed procurement, inventory, sponsorship materials, and cross-border distribution to ensure efficient event execution
-                </p>
-              </div>
-            </div>
-
-            <!-- ACTIVITY 4 — REPLACE WITH YOUR REAL ACTIVITY -->
-            <div class="leadership-card">
-              <div class="leadership-icon">🏸</div>
-              <div class="leadership-body">
-                <div class="leadership-header">
-                  <h3>Badminton Leader</h3>
-                  <span class="leadership-org">INSIM&bull; [2024-2025]</span>
-                </div>
-                <p>
-                  <!-- REPLACE: 2–3 sentences -->
-                    Oversaw <strong>inventory management</strong>, <strong>court bookings</strong>, and <strong>training coordination</strong> for the badminton club. 
-                    Also supported team cohesion, arranged <strong>sparring matches</strong>, and helped build the club’s <strong>playing squad</strong>.
-                </p>
-              </div>
-            </div>
-
-          </div>
+        <div class="projects-cta anim-up delay-4">
+          <a href="https://github.com/reynaldusjasona" class="btn btn-outline" target="_blank" rel="noopener">View All on GitHub</a>
         </div>
-      </section>
 
-      <!-- ============================================================
-           WHAT I'M CURRENTLY LEARNING SECTION
-      ============================================================ -->
-      <section class="section section--alt" id="learning">
-        <div class="container">
-          <div class="section-label">Always Growing</div>
-          <h2 class="section-title">What I'm Currently <span class="highlight">Learning</span></h2>
-          <p class="section-subtitle">
-            A recruiter-friendly signal: I don't stop at what's in the syllabus.
-          </p>
-
-          <div class="learning-grid">
-
-            <!-- REPLACE: Update with what you're actually learning right now -->
-            <div class="learning-card">
-              <div class="learning-progress-header">
-                <span class="learning-topic">Machine Learning with TensorFlow</span>
-                <span class="learning-status">In Progress</span>
-              </div>
-              <div class="learning-bar">
-                <!-- REPLACE: Update width % to reflect your actual progress -->
-                <div class="learning-fill" style="width: 55%;"></div>
-              </div>
-              <p class="learning-source">
-                <!-- REPLACE: Course name / platform / book -->
-                via [Coursera / fast.ai / book name]
-              </p>
-            </div>
-
-            <div class="learning-card">
-              <div class="learning-progress-header">
-                <span class="learning-topic">Cloud Security (AWS / GCP)</span>
-                <span class="learning-status">In Progress</span>
-              </div>
-              <div class="learning-bar">
-                <div class="learning-fill" style="width: 35%;"></div>
-              </div>
-              <p class="learning-source">via [Platform / Certification path]</p>
-            </div>
-
-            <div class="learning-card">
-              <div class="learning-progress-header">
-                <span class="learning-topic">System Design Fundamentals</span>
-                <span class="learning-status">In Progress</span>
-              </div>
-              <div class="learning-bar">
-                <div class="learning-fill" style="width: 40%;"></div>
-              </div>
-              <p class="learning-source">via [Book / Course / Resource]</p>
-            </div>
-
-            <div class="learning-card">
-              <div class="learning-progress-header">
-                <span class="learning-topic">Docker &amp; Container Basics</span>
-                <span class="learning-status">Started</span>
-              </div>
-              <div class="learning-bar">
-                <div class="learning-fill" style="width: 20%;"></div>
-              </div>
-              <p class="learning-source">via [Resource]</p>
-            </div>
-
-          </div>
-
-          <!-- Reading / studying block -->
-          <div class="reading-block">
-            <h3>Currently Reading / Studying</h3>
-            <ul class="reading-list">
-              <!-- REPLACE: Replace with your real reading list -->
-              <li>
-                <span class="reading-icon">&#128218;</span>
-                <span>
-                  <strong>[Book Title]</strong> — [Author]
-                  <em>(Topic: FinTech / AI / Security)</em>
-                </span>
-              </li>
-              <li>
-                <span class="reading-icon">&#128218;</span>
-                <span>
-                  <strong>[Book / Paper Title]</strong> — [Author or Journal]
-                  <em>(Topic: [Domain])</em>
-                </span>
-              </li>
-              <li>
-                <span class="reading-icon">&#128218;</span>
-                <span>
-                  <strong>[Online Resource / Blog]</strong>
-                  <em>(Topic: [Domain])</em>
-                </span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================================
-           CONTACT SECTION
-      ============================================================ -->
-      <section class="section" id="contact">
-        <div class="container">
-          <div class="section-label">Let's Connect</div>
-          <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
-          <p class="section-subtitle">
-            Whether it's an internship, a project collaboration, or just a conversation about
-            tech and ideas — I'd love to hear from you.
-          </p>
-
-          <div class="contact-grid">
-
-            <!-- Contact info column -->
-            <div class="contact-info">
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <!-- Email icon -->
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                    <polyline points="22,6 12,13 2,6"/>
-                  </svg>
-                </div>
-                <div>
-                  <p class="contact-label">Email</p>
-                  <!-- REPLACE: Your real email address -->
-                  <a href="mailto:reynaldusjasona@gmail.com" class="contact-value">reynaldusjasona@gmail.com</a>
-                </div>
-              </div>
-
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <!-- LinkedIn icon -->
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                    <rect x="2" y="9" width="4" height="12"/>
-                    <circle cx="4" cy="4" r="2"/>
-                  </svg>
-                </div>
-                <div>
-                  <p class="contact-label">LinkedIn</p>
-                  <!-- REPLACE: Your LinkedIn profile URL -->
-                  <a href="https://www.linkedin.com/in/jasonagnusdeiliemanta" class="contact-value" target="_blank" rel="noopener">
-                    linkedin.com/in/jasonagnusdeiliemanta
-                  </a>
-                </div>
-              </div>
-
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <!-- GitHub icon -->
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
-                  </svg>
-                </div>
-                <div>
-                  <p class="contact-label">GitHub</p>
-                  <!-- REPLACE: Your GitHub username -->
-                  <a href="https://github.com/reynaldusjasona" class="contact-value" target="_blank" rel="noopener">
-                    github.com/reynaldusjasona
-                  </a>
-                </div>
-              </div>
-
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <!-- Location icon -->
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                    <circle cx="12" cy="10" r="3"/>
-                  </svg>
-                </div>
-                <div>
-                  <p class="contact-label">Based In</p>
-                  <p class="contact-value">Singapore</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Contact form -->
-            <form class="contact-form" id="contact-form">
-              <div class="form-group">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" placeholder="Your Name" required />
-              </div>
-              <div class="form-group">
-                <label for="email">Your Email</label>
-                <input type="email" id="email" name="email" placeholder="Your@company.com" required />
-              </div>
-              <div class="form-group">
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" placeholder="Internship Opportunity / Collaboration" />
-              </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Hi Jason, I'd like to..." required></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary btn-full">
-                Send Message
-              </button>
-              <!-- Form note: connect to a backend or Formspree later -->
-              <p class="form-note">
-                <!-- NOTE for Jason: To make this form actually send emails for free, sign up at
-                     https://formspree.io and update the form action attribute. -->
-                Or reach me directly at
-                <a href="mailto:reynaldusjasona@gmail.com">reynaldusjasona@gmail.com</a>
-              </p>
-            </form>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- ============================================================
-         FOOTER
-    ============================================================ -->
-    <footer class="footer">
-      <div class="container footer-inner">
-        <p class="footer-name">Jason Agnus Dei Liemanta</p>
-        <p class="footer-tagline">CS Student &bull; FinTech &bull; AI &bull; Cybersecurity</p>
-        <div class="footer-links">
-          <!-- REPLACE: Your actual social links -->
-          <a href="https://github.com/reynaldusjasona" target="_blank" rel="noopener" aria-label="GitHub">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
-            </svg>
-          </a>
-          <a href="https://www.linkedin.com/in/jasonagnusdeiliemanta" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-              <rect x="2" y="9" width="4" height="12"/>
-              <circle cx="4" cy="4" r="2"/>
-            </svg>
-          </a>
-          <a href="mailto:your.reynaldusjasona@gmail.com" aria-label="Email">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-              <polyline points="22,6 12,13 2,6"/>
-            </svg>
-          </a>
-        </div>
-        <p class="footer-copy">
-          &copy; <span id="year"></span> Jason Agnus Dei Liemanta. Built with care.
-        </p>
       </div>
-    </footer>
+    </section>
 
-    <!-- JavaScript -->
-    <script src="js/main.js"></script>
-  </body>
+    <!-- ===================================================
+         EXPERIENCE — asymmetric two-column
+    =================================================== -->
+    <section class="section section--alt" id="experience">
+      <div class="container">
+        <div class="eyebrow anim-up">Experience</div>
+        <h2 class="section-title anim-up delay-1">Where I've<br /><em>put in the work.</em></h2>
+
+        <div class="exp-layout">
+
+          <!-- Left: Professional roles -->
+          <div class="exp-main anim-right">
+            <div class="col-label">Professional</div>
+
+            <div class="exp-entry">
+              <div class="exp-date">Jan 2026 — Present</div>
+              <h3 class="exp-role">Penerangan Sosial &amp; Budaya Intern</h3>
+              <p class="exp-org">Embassy of the Republic of Indonesia (KBRI), Singapore</p>
+              <ul class="exp-bullets">
+                <li>Coordinated cultural diplomacy programs and community outreach for the Indonesian diaspora in Singapore.</li>
+                <li>Drafted official correspondence, prepared event briefs, and managed logistics for public-facing embassy programs.</li>
+                <li>Direct exposure to government communication protocols, cross-cultural diplomacy, and high-stakes stakeholder management.</li>
+              </ul>
+              <div class="exp-tags">
+                <span class="tag">Diplomacy</span>
+                <span class="tag">Event Coordination</span>
+                <span class="tag">Documentation</span>
+              </div>
+            </div>
+
+            <div class="exp-entry">
+              <div class="exp-date">Jan – Feb 2024</div>
+              <h3 class="exp-role">PANWASLU Luar Negeri Singapura</h3>
+              <p class="exp-org">BAWASLU — Indonesian General Election Overseas Supervisor</p>
+              <ul class="exp-bullets">
+                <li>Supervised the Indonesian general election overseas in Singapore — ensured transparency, procedural compliance, and impartiality throughout.</li>
+                <li>Coordinated between candidate representatives, committee members, and voters to manage logistics and communications on election day.</li>
+                <li>Produced post-election reports documenting outcomes, participation rates, and procedural observations.</li>
+              </ul>
+              <div class="exp-tags">
+                <span class="tag">Operations</span>
+                <span class="tag">Governance</span>
+                <span class="tag">Stakeholder Coordination</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Leadership & activities -->
+          <div class="exp-side anim-left">
+            <div class="col-label">Leadership &amp; Activities</div>
+
+            <div class="activity-entry">
+              <div class="activity-head">
+                <strong>PR Sub-Committee</strong>
+                <span class="activity-org">PPIS · Jan – Dec 2025</span>
+              </div>
+              <p>Led communications for Peduli Kartini, a charity initiative that raised <strong>SGD 30,000</strong> for Indonesian domestic workers in Singapore. Also contributed to Sayang Anak, a three-week outreach programme for underprivileged children.</p>
+            </div>
+
+            <div class="activity-entry">
+              <div class="activity-head">
+                <strong>Logistics Director</strong>
+                <span class="activity-org">Kembang KemPPIS 2025 · Jun – Sep 2025</span>
+              </div>
+              <p>Directed logistics for a student orientation programme with <strong>300+ participants</strong> and a <strong>SGD 5,000+</strong> budget. Managed procurement, inventory, and cross-team coordination end-to-end.</p>
+            </div>
+
+            <div class="activity-entry">
+              <div class="activity-head">
+                <strong>Student Ambassador</strong>
+                <span class="activity-org">SIM Global Education · 2024 – 2026</span>
+              </div>
+              <p>Represented the university at graduation ceremonies, open houses, and volunteer events including a river clean-up programme. Guided campus tours for prospective students.</p>
+            </div>
+
+            <div class="activity-entry">
+              <div class="activity-head">
+                <strong>Badminton Leader</strong>
+                <span class="activity-org">INSIM · 2024 – 2025</span>
+              </div>
+              <p>Managed court bookings, equipment inventory, and training coordination. Arranged sparring matches and helped develop the club's competitive squad.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================
+         CONTACT
+    =================================================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-layout">
+
+          <div class="contact-left anim-right">
+            <div class="eyebrow">Contact</div>
+            <h2 class="section-title">Let's talk.</h2>
+            <p class="contact-desc">Internship opportunity, project collaboration, or a conversation about AI and security — I'd like to hear from you.</p>
+            <div class="contact-links">
+              <a href="mailto:reynaldusjasona@gmail.com" class="contact-link">
+                <span class="contact-icon">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </span>
+                reynaldusjasona@gmail.com
+              </a>
+              <a href="https://www.linkedin.com/in/jasonagnusdeiliemanta" class="contact-link" target="_blank" rel="noopener">
+                <span class="contact-icon">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </span>
+                linkedin.com/in/jasonagnusdeiliemanta
+              </a>
+              <a href="https://github.com/reynaldusjasona" class="contact-link" target="_blank" rel="noopener">
+                <span class="contact-icon">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </span>
+                github.com/reynaldusjasona
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-right anim-left">
+            <!--
+              FORMSPREE SETUP:
+              1. Go to https://formspree.io and create a free account
+              2. Create a new form — you'll get an endpoint like https://formspree.io/f/abcdefgh
+              3. Replace YOUR_ID below with your actual form ID (the part after /f/)
+            -->
+            <form class="contact-form" id="contact-form"
+                  action="https://formspree.io/f/YOUR_ID"
+                  method="POST">
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" placeholder="Your name" required />
+                </div>
+                <div class="form-field">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="your@email.com" required />
+                </div>
+              </div>
+              <div class="form-field">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Internship / Collaboration / Other" />
+              </div>
+              <div class="form-field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Hi Jason…" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+              <p class="form-note">Or email me directly: <a href="mailto:reynaldusjasona@gmail.com">reynaldusjasona@gmail.com</a></p>
+            </form>
+
+            <div class="form-success" id="form-success" hidden>
+              <span class="success-check">✓</span>
+              <h3>Message sent!</h3>
+              <p>Thanks for reaching out. I'll get back to you soon.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-name">Jason Agnus Dei Liemanta</p>
+      <p class="footer-sub">CS Student · AI &amp; Cybersecurity · Singapore</p>
+      <div class="footer-social">
+        <a href="https://github.com/reynaldusjasona" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/jasonagnusdeiliemanta" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="mailto:reynaldusjasona@gmail.com" aria-label="Email">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+      <p class="footer-copy">© <span id="year"></span> Jason Agnus Dei Liemanta</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
 </html>
