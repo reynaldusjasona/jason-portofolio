@@ -37,6 +37,28 @@
   --max-w: 1160px;
 }
 
+/* ── Dark mode ── */
+body.dark {
+  --navy:       #7B9FFF;
+  --navy-mid:   #97B3FF;
+  --navy-light: rgba(123,159,255,.12);
+  --red:        #E8756C;
+  --red-light:  rgba(232,117,108,.12);
+
+  --bg:         #111118;
+  --bg-alt:     #16161F;
+  --surface:    #1C1C28;
+  --border:     #2A2A3A;
+
+  --text:       #E8E8F0;
+  --text-mid:   #A0A0BC;
+  --text-muted: #6A6A88;
+
+  --sh-sm: 0 1px 4px rgba(0,0,0,.25);
+  --sh-md: 0 4px 16px rgba(0,0,0,.35);
+  --sh-lg: 0 8px 32px rgba(0,0,0,.45);
+}
+
 /* ── Reset ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; font-size: 16px; }
@@ -146,6 +168,13 @@ p { color: var(--text-mid); line-height: 1.8; }
   transition: border-color var(--ease), box-shadow var(--ease);
 }
 .navbar.scrolled { border-color: var(--border); box-shadow: var(--sh-sm); }
+body.dark .navbar { background: rgba(17,17,24,.92); }
+body.dark .hero-badge { color: #66bb6a; background: rgba(102,187,106,.12); border-color: rgba(102,187,106,.25); }
+body.dark .badge-dot { background: #66bb6a; }
+body.dark .certs-band { background: #0D0D18; }
+body.dark .cert-img { background: #151525; }
+body.dark .hero-photo-wrap { background: linear-gradient(145deg, rgba(123,159,255,.15) 0%, rgba(123,159,255,.06) 100%); border-color: rgba(123,159,255,.2); }
+body.dark .footer { background: #0A0A12; }
 
 .nav-inner {
   max-width: var(--max-w);
@@ -818,6 +847,36 @@ p { color: var(--text-mid); line-height: 1.8; }
 .footer-social a { color: rgba(255,255,255,.48); transition: color var(--ease); }
 .footer-social a:hover { color: #fff; }
 .footer-copy { font-size: .7rem; color: rgba(255,255,255,.28); margin: 0; }
+
+/* ==========================================================
+   DARK MODE TOGGLE
+   ========================================================== */
+.theme-toggle {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 200;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--sh-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--ease), border-color var(--ease), transform var(--ease);
+  color: var(--text);
+}
+.theme-toggle:hover {
+  transform: scale(1.08);
+  border-color: var(--navy);
+}
+
+.theme-icon--moon { display: none; }
+body.dark .theme-icon--sun  { display: none; }
+body.dark .theme-icon--moon { display: block; }
 
 /* ==========================================================
    SCROLL ANIMATIONS
