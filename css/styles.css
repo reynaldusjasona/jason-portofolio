@@ -59,6 +59,30 @@ body.dark {
   --sh-lg: 0 8px 32px rgba(0,0,0,.45);
 }
 
+/* ── Magic UI Effects ── */
+@property --beam-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes beam-rotate { to { --beam-angle: 360deg; } }
+
+@keyframes gradient-text {
+  0%   { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes shimmer-sweep {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 /* ── Reset ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; font-size: 16px; }
@@ -120,7 +144,20 @@ p { color: var(--text-mid); line-height: 1.8; }
 
 /* ── Layout ── */
 .container { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; }
-.section { padding: 6rem 0; }
+.section { padding: 6rem 0; position: relative; }
+.section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, var(--border) 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: .25;
+  pointer-events: none;
+  z-index: 0;
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, #000 30%, transparent 80%);
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, #000 30%, transparent 80%);
+}
+.section > .container { position: relative; z-index: 1; }
 .section--alt { background: var(--bg-alt); }
 
 /* ── Buttons ── */
@@ -136,7 +173,17 @@ p { color: var(--text-mid); line-height: 1.8; }
   transition: all var(--ease);
   white-space: nowrap;
 }
-.btn-primary  { background: var(--navy); color: #fff; border-color: var(--navy); }
+.btn-primary  { background: var(--navy); color: #fff; border-color: var(--navy); position: relative; overflow: hidden; }
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent);
+  animation: shimmer-sweep 3s ease-in-out infinite;
+  pointer-events: none;
+}
 .btn-primary:hover  { background: var(--navy-mid); border-color: var(--navy-mid); transform: translateY(-2px); box-shadow: var(--sh-md); }
 .btn-secondary { background: transparent; color: var(--navy); border-color: var(--navy); }
 .btn-secondary:hover { background: var(--navy-light); transform: translateY(-2px); }
@@ -299,18 +346,24 @@ body.dark .footer { background: #0A0A12; }
   50%      { opacity: .55; transform: scale(1.4); }
 }
 
-/* Name in DM Serif Display */
-.hero-name { margin-bottom: 1.25rem; }
+/* Name in DM Serif Display — animated gradient text */
+.hero-name {
+  margin-bottom: 1.25rem;
+  background: linear-gradient(90deg, var(--text) 0%, var(--navy) 40%, var(--red) 60%, var(--navy) 80%, var(--text) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-text 6s linear infinite;
+}
 .hero-name-line {
   display: block;
   font-family: var(--display);
   font-size: clamp(2.6rem, 5.5vw, 4.4rem);
   font-weight: 400;
   line-height: 1.04;
-  color: var(--text);
 }
 .hero-name-italic {
-  color: var(--navy);
   font-style: italic;
 }
 
@@ -499,21 +552,19 @@ body.dark .footer { background: #0A0A12; }
   margin-top: .5rem;
 }
 
+.certs-marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+}
 .certs-track {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   gap: 24px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: 0 32px 16px;
-  width: 100%;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  cursor: grab;
+  width: max-content;
+  padding: 0 0 16px;
+  animation: marquee-scroll 30s linear infinite;
 }
-.certs-track::-webkit-scrollbar { display: none; }
-.certs-track:active { cursor: grabbing; }
+.certs-track:hover { animation-play-state: paused; }
 
 .cert-card {
   position: relative;
@@ -580,7 +631,24 @@ body.dark .footer { background: #0A0A12; }
   padding: 2rem 2.5rem;
   margin-bottom: 1.5rem;
   transition: box-shadow var(--ease), transform var(--ease);
+  position: relative;
 }
+.project-featured::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: conic-gradient(from var(--beam-angle), transparent 80%, var(--navy-mid), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: beam-rotate 4s linear infinite;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+.project-featured:hover::after { opacity: 1; }
 .project-featured:hover { box-shadow: var(--sh-lg); transform: translateY(-3px); }
 
 .project-meta-row {
@@ -885,28 +953,32 @@ body.dark .theme-icon--moon { display: block; }
 .anim-up {
   opacity: 0;
   transform: translateY(28px);
-  transition: opacity .65s ease, transform .65s ease;
+  filter: blur(6px);
+  transition: opacity .65s ease, transform .65s ease, filter .65s ease;
 }
 .anim-right {
   opacity: 0;
   transform: translateX(-26px);
-  transition: opacity .65s ease, transform .65s ease;
+  filter: blur(6px);
+  transition: opacity .65s ease, transform .65s ease, filter .65s ease;
 }
 .anim-left {
   opacity: 0;
   transform: translateX(26px);
-  transition: opacity .65s ease, transform .65s ease;
+  filter: blur(6px);
+  transition: opacity .65s ease, transform .65s ease, filter .65s ease;
 }
 .anim-scale {
   opacity: 0;
   transform: scale(.94);
-  transition: opacity .55s ease, transform .55s ease;
+  filter: blur(4px);
+  transition: opacity .55s ease, transform .55s ease, filter .55s ease;
 }
 
 .anim-up.visible,
 .anim-right.visible,
-.anim-left.visible { opacity: 1; transform: none; }
-.anim-scale.visible { opacity: 1; transform: scale(1); }
+.anim-left.visible { opacity: 1; transform: none; filter: blur(0); }
+.anim-scale.visible { opacity: 1; transform: scale(1); filter: blur(0); }
 
 /* Stagger delays */
 .delay-1 { transition-delay: .08s !important; }

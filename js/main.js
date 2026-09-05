@@ -68,33 +68,40 @@ const revealObserver = new IntersectionObserver(entries => {
 document.querySelectorAll('.anim-up, .anim-right, .anim-left, .anim-scale')
   .forEach(el => revealObserver.observe(el));
 
-// Cert track — drag to scroll on desktop
-const certsTrack = document.querySelector('.certs-track');
-if (certsTrack) {
-  let isDragging = false, startX, scrollLeft;
+// Cert track — auto-scrolling marquee (CSS handles animation)
 
-  certsTrack.addEventListener('mousedown', e => {
-    isDragging = true;
-    startX     = e.pageX - certsTrack.offsetLeft;
-    scrollLeft = certsTrack.scrollLeft;
-    certsTrack.style.cursor = 'grabbing';
-  });
-  certsTrack.addEventListener('mouseleave', () => {
-    isDragging = false;
-    certsTrack.style.cursor = 'grab';
-  });
-  certsTrack.addEventListener('mouseup', () => {
-    isDragging = false;
-    certsTrack.style.cursor = 'grab';
-  });
-  certsTrack.addEventListener('mousemove', e => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x    = e.pageX - certsTrack.offsetLeft;
-    const walk = (x - startX) * 1.4;
-    certsTrack.scrollLeft = scrollLeft - walk;
-  });
+// Number ticker — count up hero stats when visible
+const statNumbers = document.querySelectorAll('.stat-number[data-target]');
+
+function animateNumber(el) {
+  const target = parseFloat(el.dataset.target);
+  const decimals = parseInt(el.dataset.decimals || '0', 10);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1600;
+  const start = performance.now();
+
+  function tick(now) {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+    const current = eased * target;
+    el.textContent = current.toFixed(decimals) + suffix;
+    if (progress < 1) requestAnimationFrame(tick);
+  }
+
+  requestAnimationFrame(tick);
 }
+
+const statsObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateNumber(entry.target);
+      statsObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
+
+statNumbers.forEach(el => statsObserver.observe(el));
 
 // Contact form — submit to Formspree, show success panel
 const contactForm = document.getElementById('contact-form');
